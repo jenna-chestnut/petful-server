@@ -20,7 +20,7 @@ app.use('/api/people', peopleRouter);
 app.use('/api/pets', petRouter);
 
 app.get('/', (req, res) => {
-  res.status(200).send('Hello, boilerplate!');
+  res.status(200).send('Hello, Petful! Use endpoints /api/pets and /api/people');
 });
 
 app.use(function errorHandler(error, req, res) {
