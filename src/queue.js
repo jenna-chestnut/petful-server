@@ -30,7 +30,6 @@ class Queue {
     return node.data;
   }
   show() {
-
     if(!this.first) { return; }
 
     return this.first.data;

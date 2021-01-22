@@ -6,13 +6,16 @@ const peopleRouter = express.Router();
 peopleRouter
   .route('/')
   .get((req, res, next) => {
-    let peopleList = PeopleQ.get();
-    res.json(peopleList);
+    let peopleList = PeopleQ.all();
+    res.status(200).json(peopleList);
   })
   .post((req, res, next) => {
-    let { newPerson } = req.body;
-    PeopleQ.enqueue(newPerson);
-    res(201).json(newPerson);
+    let { name } = req.body;
+    PeopleQ.enqueue(name);
+
+    let peopleList = PeopleQ.all();
+    res.status(201).json(peopleList[peopleList.length - 1]);
+
   });
 
 module.exports = peopleRouter;

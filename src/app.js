@@ -5,6 +5,8 @@ const cors = require('cors');
 const helmet = require('helmet');
 const { NODE_ENV } = require('./config');
 const peopleRouter = require('./Routes/people-router');
+const petRouter = require('./Routes/pet-router');
+
 
 const morganOption = NODE_ENV === 'production' ? 'tiny' : 'common';
 
@@ -12,8 +14,10 @@ const app = express();
 app.use(morgan(morganOption));
 app.use(helmet());
 app.use(cors());
+app.use(express.json());
 
 app.use('/api/people', peopleRouter);
+app.use('/api/pets', petRouter);
 
 app.get('/', (req, res) => {
   res.status(200).send('Hello, boilerplate!');
