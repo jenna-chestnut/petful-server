@@ -27,3 +27,18 @@ This server-side app was created with:
 <img align="left" alt="Heroku" src="https://img.shields.io/badge/Heroku-430098?style=for-the-badge&logo=heroku&logoColor=white" />
 <img align="left" alt="Git" width="26px" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/git/git.png" />
 <img align="left" alt="GitHub" width="26px" src="https://raw.githubusercontent.com/github/explore/78df643247d429f6cc873026c0622819ad797942/topics/github/github.png" />
+
+---
+
+### Endpoints Tree 
+
+➖**Routes🔻**    
+➖**BASE URL: /api**   
+
+➖➖*/people*   
+(GET) returns names of people in our adoption line, 
+(POST) adds the submitted name to the end of our adoption line
+
+➖➖*/pets* 
+(GET) returns name and details of the 1 dog and 1 cat that are first up to be adopted,
+(DELETE) 'adopts' one of the pets in line, as well as removing the name of the new owner from the adoption line
