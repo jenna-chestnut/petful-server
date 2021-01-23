@@ -14,9 +14,9 @@ const all = () => {
 
   if (peopleList.length === 0) {
     let random = [
-      fillerNames[Math.floor(Math.random * 9)],
-      fillerNames[Math.floor(Math.random * 9)],
-      fillerNames[Math.floor(Math.random * 9)]
+      fillerNames[Math.floor(Math.random() * 9)],
+      fillerNames[Math.floor(Math.random() * 9)],
+      fillerNames[Math.floor(Math.random() * 9)]
     ];
 
     random.forEach(el => {
