@@ -17,6 +17,7 @@ const all = () => {
     const rName = () => { 
       return fillerNames[Math.floor(Math.random() * fillerNames.length)]; 
     };
+    
     let random = [
       rName(), rName(), rName()
     ];
