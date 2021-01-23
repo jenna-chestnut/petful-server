@@ -3,6 +3,8 @@ const PeopleQ = require('../Services/people-service');
 
 const peopleRouter = express.Router();
 
+
+
 peopleRouter
   .route('/')
   .get((req, res, next) => {
@@ -13,7 +15,7 @@ peopleRouter
     let { name } = req.body;
     PeopleQ.enqueue(name);
 
-    let peopleList = PeopleQ.all();
+    let peopleList = PeopleQ.all(); 
     res.status(201).json(peopleList[peopleList.length - 1]);
   });
 
