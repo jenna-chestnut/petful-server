@@ -40,6 +40,6 @@ module.exports = {
   adopt(pet) {
     let toAdopt = pet === 'cat' 
       ? CatQ : DogQ;
-    return toAdopt.dequeue().name;
+    return toAdopt.dequeue();
   }
 };

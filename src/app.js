@@ -16,8 +16,8 @@ app.use(helmet());
 app.use(cors());
 app.use(express.json());
 
-app.use('/api/people', peopleRouter);
-app.use('/api/pets', petRouter);
+app.use('/api/people', peopleRouter); // see waiting list, add our name
+app.use('/api/pets', petRouter); // see upcoming pets (1 cat, 1 dog), adopt a pet (1 cat or 1 dog)
 
 app.get('/', (req, res) => {
   res.status(200).send('Hello, Petful! Use endpoints /api/pets and /api/people');

@@ -15,7 +15,6 @@ peopleRouter
 
     let peopleList = PeopleQ.all();
     res.status(201).json(peopleList[peopleList.length - 1]);
-
   });
 
 module.exports = peopleRouter;
