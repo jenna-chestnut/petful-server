@@ -13,16 +13,16 @@ const all = () => {
   let peopleList = PeopleQ.all();
 
   if (peopleList.length === 0) {
-    peopleList.forEach(el => {
+    fillerNames.forEach(el => {
       PeopleQ.enqueue(el);
     });
   }
-  
+
   return PeopleQ.all();
 };
 
 module.exports = {
   all,
-  dequeue() { return PeopleQ.dequeue; },
+  dequeue() { return PeopleQ.dequeue(); },
   enqueue(name) { PeopleQ.enqueue(name); }
 };
