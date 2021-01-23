@@ -13,18 +13,10 @@ const fillerNames = ['Babby', 'Artia', 'Borksy', 'Macaroni', 'Digital', 'Essie',
 const all = () => {
   let peopleList = PeopleQ.all();
 
-  if (peopleList.length === 1) {
-    const rName = () => { 
-      return fillerNames[Math.floor(Math.random() * fillerNames.length)]; 
-    };
-    
-    let random = [
-      rName(), rName(), rName()
-    ];
-
-    random.forEach(el => {
-      PeopleQ.enqueue(el);
-    });
+  if (peopleList.length === 0) {
+    PeopleQ.enqueue(
+      fillerNames[Math.floor(Math.random() * fillerNames.length)]
+    );
   }
 
   return PeopleQ.all();
