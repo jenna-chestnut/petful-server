@@ -7,7 +7,7 @@ people.forEach(el => {
   PeopleQ.enqueue(el);
 });
 
-const fillerNames = ['Babby, Artia, Borksy'];
+const fillerNames = ['Babby', 'Artia', 'Borksy'];
 
 const all = () => {
   let peopleList = PeopleQ.all();
