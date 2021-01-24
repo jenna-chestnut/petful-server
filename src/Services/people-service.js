@@ -12,7 +12,7 @@ const fillerNames = ['Babby', 'Artia', 'Borksy', 'Macaroni', 'Digital', 'Essie',
 const all = () => {
   let peopleList = PeopleQ.all();
 
-  if (peopleList.length <= 2) {
+  if (peopleList.length <= 5) {
     PeopleQ.enqueue(
       fillerNames[Math.floor(Math.random() * fillerNames.length)]
     );
