@@ -13,10 +13,9 @@ const all = () => {
   let peopleList = PeopleQ.all();
 
   if (peopleList.length === 0) {
-    const pplQ = () => PeopleQ.enqueue(
+    PeopleQ.enqueue(
       fillerNames[Math.floor(Math.random() * fillerNames.length)]
     );
-    pplQ(); pplQ();
   }
 
   return PeopleQ.all();
